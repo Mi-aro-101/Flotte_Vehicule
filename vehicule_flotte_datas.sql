@@ -1,3 +1,7 @@
+insert into utilisateur(id_utilisateur, email, mot_de_passe) values
+	('USR0001', 'mamisoa@gmail.com', 'layah'),
+	('USR0002', 'fabien@gmail.com', 'haingo');
+
 insert into marque (id_marque, des_marque) values 
 	('MRQ0001', 'Toyota'),
 	('MRQ0002', 'Mercedes');

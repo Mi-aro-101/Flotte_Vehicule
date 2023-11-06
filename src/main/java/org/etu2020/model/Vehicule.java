@@ -21,11 +21,11 @@ import jakarta.persistence.Table;
 @Table(name="vehicule")
 public class Vehicule {
 	@Id
-	@GeneratedValue
-	String id_vehicule;
+	@Column(name="id_vehicule")
+	String idVehicule;
 	
 	@Column(name="des_vehicule")
-	String des_vehicule;
+	String desVehicule;
 	
 	@ManyToOne(fetch = FetchType.EAGER, optional=false)
 	@JoinColumn(nullable=false, name="id_marque")
@@ -39,11 +39,11 @@ public class Vehicule {
 	}
 	
 	public String getId_vehicule() {
-		return id_vehicule;
+		return idVehicule;
 	}
 	
 	public String getDes_vehicule() {
-		return des_vehicule;
+		return desVehicule;
 	}
 	
 	public Marque getMarque() {
@@ -51,11 +51,11 @@ public class Vehicule {
 	}
 	
 	public void setId_vehicule(String id_vehicule) {
-		this.id_vehicule = id_vehicule;
+		this.idVehicule = id_vehicule;
 	}
 	
 	public void setDes_vehicule(String des_vehicule) {
-		this.des_vehicule = des_vehicule;
+		this.desVehicule = des_vehicule;
 	}
 	
 	public void setMarque(Marque marque) {

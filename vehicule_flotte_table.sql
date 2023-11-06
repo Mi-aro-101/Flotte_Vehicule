@@ -1,5 +1,11 @@
 -- d1atabase name : vehicule_flotte
 
+create table utilisateur(
+	id_utilisateur varchar(7) primary key not null,
+	email varchar(50) not null,
+	mot_de_passe varchar(50) not null
+);
+
 create table marque(
 	id_marque VARCHAR(7) primary key not null, --prefix : MRQ
 	des_marque VARCHAR(50) not null
@@ -13,7 +19,7 @@ create table vehicule(
 
 create table kilometrage(
 	id_kilometrage VARCHAR(7) primary key not null, -- prefix : KMT
-	id_vehicule VARCHAR(7) REFERENCES vehicule(id_vehicule), not null
+	id_vehicule VARCHAR(7) REFERENCES vehicule(id_vehicule) not null,
 	date_kilometrage date not null,
 	debutkm double precision default 0,
 	finkm double precision not null

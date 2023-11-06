@@ -3,11 +3,10 @@ package org.etu2020.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="users")
-public class Users {
+@Table(name="utilisateur")
+public class Utilisateur {
 	@Id
-	@GeneratedValue
-	int id;
+	String id_utilisateur;
 	
 	@Column(name="first_name", nullable=false)
 	String first_name;
@@ -18,16 +17,16 @@ public class Users {
 	@Column(name="city", nullable=false)
 	String city;
 	
-	public Users(String first_name, String last_name, String city) {
+	public Utilisateur(String first_name, String last_name, String city) {
 		this.setFirst_name(first_name);
 		this.setLast_name(last_name);
 		this.setCity(city);
 	}
 	
-	public Users() {}
+	public Utilisateur() {}
 	
-	public int getId() {
-		return id;
+	public String getId() {
+		return id_utilisateur;
 	}
 	
 	public String getFirst_name() {
@@ -42,8 +41,8 @@ public class Users {
 		return city;
 	}
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setId(String id) {
+		this.id_utilisateur = id;
 	}
 	
 	public void setFirst_name(String first_name) {

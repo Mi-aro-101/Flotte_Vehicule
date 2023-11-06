@@ -18,7 +18,6 @@ import jakarta.persistence.Table;
 @Table(name="marque")
 public class Marque {
 	@Id
-	@GeneratedValue
 	String id_marque;
 	
 	@Column(name="des_marque", nullable=false)

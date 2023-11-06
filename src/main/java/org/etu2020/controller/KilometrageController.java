@@ -69,6 +69,11 @@ public class KilometrageController {
 		}
 	}
 	
+	/**
+	 * get kilometrage by it's debutkm
+	 * @param debutkm
+	 * @return
+	 */
 	@GetMapping("/debutkm")
 	public ResponseEntity<List<Kilometrage>> getKilometrageByDebutkm(@RequestParam("debutkm") double debutkm){
 		try {
@@ -82,6 +87,11 @@ public class KilometrageController {
 		}
 	}
 	
+	/**
+	 * get kilometrage as it's finkm
+	 * @param finkm
+	 * @return
+	 */
 	@GetMapping("/finkm")
 	public ResponseEntity<List<Kilometrage>> getKilometrageByFinkm(@RequestParam("finkm") double finkm){
 		try {
